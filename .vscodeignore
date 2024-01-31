@@ -1,0 +1,7 @@
+**/*.ts
+**/node_modules/**
+**/.vscode/**
+!.vscodeignore
+!.gitignore
+!.README.md
+!.LICENSE.md

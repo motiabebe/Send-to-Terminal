@@ -1,0 +1,53 @@
+{
+  "name": "send-to-terminal-pro",
+  "displayName": "Send to Terminal Pro",
+  "description": "Send commands from the editor to the terminal.",
+  "version": "1.0.0",
+  "publisher": "ibexCode",
+  "icon": "assets/icon.png",
+  "main": "./out/sendToTerminal.js",
+  "scripts": {
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/motiabebe/send-to-terminal.git"
+  },
+  "activationEvents": [
+    "onCommand:extension.passToTerminal",
+    "onCommand:extension.executeInTerminal"
+  ],
+  "dependencies": {
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-electron": "^2.3.9"
+  },
+  "engines": {
+    "vscode": "^1.61.0"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.passToTerminal",
+        "title": "sendToTerminal: Send to Terminal"
+      },
+      {
+        "command": "extension.executeInTerminal",
+        "title": "sendToTerminal: Send to Terminal and Execute"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.passToTerminal",
+        "key": "alt+right",
+        "mac": "cmd+right",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.executeInTerminal",
+        "key": "alt+enter",
+        "mac": "cmd+enter",
+        "when": "editorTextFocus"
+      }
+    ]
+  }
+}
