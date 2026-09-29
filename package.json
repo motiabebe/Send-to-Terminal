@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@types/vscode": "^1.85.0",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.5.2"
   },
   "engines": {
     "vscode": "^1.61.0"
